@@ -1,0 +1,65 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "The Issue Management System Web Portal helps organizations to manage their issues more efficiently.",
+  "main": "server.js",
+  "engines": {
+    "node": "12.22.1",
+    "npm": "7.9.0"
+  },
+  "scripts": {
+    "begin": "npm run build && node server.js",
+    "start": "node server.js",
+    "start:original": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'frontend/*'\" \"npm run frontend\"",
+    "frontend": "cd frontend && npm run start",
+    "install": "cd frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@databases/pg": "^3.2.0",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.24.0",
+    "connect-pg-simple": "^6.2.1",
+    "connect-redis": "^5.0.0",
+    "cookie": "^0.4.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "memorystore": "^1.6.4",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.5.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pdf-creator-node": "^2.2.2",
+    "pdfmake": "^0.1.71",
+    "pg": "^8.4.2",
+    "puppeteer": "^8.0.0",
+    "redis": "^3.0.2",
+    "uuid": "^8.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkthecompguy/akasisystems.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kkthecompguy/akasisystems/issues"
+  },
+  "homepage": "https://github.com/kkthecompguy/akasisystems#readme",
+  "keywords": [],
+  "devDependencies": {
+    "concurrently": "^6.0.1",
+    "nodemon": "^2.0.7"
+  }
+}

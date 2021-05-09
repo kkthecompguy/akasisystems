@@ -1,0 +1,198 @@
+
+http://localhost:5000/api/v1/superadmin/list
+
+###
+POST http://localhost:5000/api/v1/superadmin/login
+Content-Type: application/json
+
+{
+  "email": "superadmin@gmail.com",
+  "password": "qwerty123"
+}
+
+###
+POST https://akasi-ism.herokuapp.com/api/v1/superadmin/register
+Content-Type: application/json
+
+{
+  "name": "Super Admin",
+  "email": "superadmin@gmail.com",
+  "phoneNumber": "0711223344",
+  "password": "qwerty123@123"
+}
+
+###
+POST http://localhost:5000/api/v1/superadmin/createorg
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgwNjAxMDEsImV4cCI6MTYxODA2MzcwMX0.2iAf9k-6DFdZ_8yv0k3zsHbPMHJac0w5V8OaR-aHzsc
+
+{
+  "orgName": "KosamTech Startup",
+  "orgEmail": "kosamtech@kosamtech.com",
+  "orgPassword": "kosamtech",
+  "adminName": "kosamadmin",
+  "workId": 11,
+  "adminEmail": "kosamadmin@gmail.com",
+  "adminPassword": "kosamadmin"
+}
+
+###
+GET http://localhost:5000/api/v1/superadmin/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgwNjAxMDEsImV4cCI6MTYxODA2MzcwMX0.2iAf9k-6DFdZ_8yv0k3zsHbPMHJac0w5V8OaR-aHzsc
+
+###
+PUT http://localhost:5000/api/v1/superadmin/org/status/update/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgwNjAxMDEsImV4cCI6MTYxODA2MzcwMX0.2iAf9k-6DFdZ_8yv0k3zsHbPMHJac0w5V8OaR-aHzsc
+
+{
+  "status": false
+}
+
+###
+GET http://localhost:5000/api/v1/superadmin/getorgs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgxNjc3ODUsImV4cCI6MTYxODE3MTM4NX0.SUnP-xwbe9qO3KjNKmOHe-3oQu4QcOFdu0QXj43aT3E
+
+###
+GET http://localhost:5000/api/v1/superadmin/getusers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgxMjc0NTcsImV4cCI6MTYxODEzMTA1N30.6WMptZWPFouEMrrnVgC_W2y391r8__b7-DBRyjPXfNM
+
+
+###
+GET http://localhost:5000/api/v1/superadmin/orgadmins
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgxMjc0NTcsImV4cCI6MTYxODEzMTA1N30.6WMptZWPFouEMrrnVgC_W2y391r8__b7-DBRyjPXfNM
+
+
+###
+GET http://localhost:5000/api/v1/superadmin/issues
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgxMjc0NTcsImV4cCI6MTYxODEzMTA1N30.6WMptZWPFouEMrrnVgC_W2y391r8__b7-DBRyjPXfNM
+
+
+###
+GET http://localhost:5000/api/v1/superadmin/issuesraisedtome
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2MTgxMjc0NTcsImV4cCI6MTYxODEzMTA1N30.6WMptZWPFouEMrrnVgC_W2y391r8__b7-DBRyjPXfNM
+
+
+###
+POST http://localhost:5000/api/v1/orgadmin/login
+Content-Type: application/json
+
+{
+  "email": "tinaadmin@gmail.com",
+  "password": "tinaadmin"
+}
+
+###
+PUT  http://localhost:5000/api/v1/orgadmin/update/org
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im9yZ2FkbWluIiwiZW1haWwiOiJrb3NhbWFkbWluQGdtYWlsLmNvbSIsIm5hbWUiOiJrb3NhbWFkbWluIiwiaWF0IjoxNjE4MDY5MjQzLCJleHAiOjE2MTgwNzI4NDN9.Tx-3TKUiMueuwSzTCgAV2O6-odtH-MqF0IB8M4C74dg
+
+{
+  "base64EncodedImage": "data:image/png;base64,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",
+  "theme": "dark"
+}
+
+###
+POST http://localhost:5000/api/v1/orgadmin/adduser
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6Im9yZ2FkbWluIiwiZW1haWwiOiJ0aW5hYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InRpbmEgYWRtaW4iLCJpYXQiOjE2MTgyMTYwNzksImV4cCI6MTYxODIxOTY3OX0.dlOF98Pmf0xEENEGdRbk3i9ym0zpaOxLdjg7MfAxHNQ
+
+{
+  "name": "John Doe",
+  "workId": 12,
+  "email": "johndoe@gmail.com",
+  "password": "johndoe123",
+  "role": "supervisor",
+  "department": "Human Resource"
+}
+
+###
+GET http://localhost:5000/api/v1/orgadmin/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6Im9yZ2FkbWluIiwiZW1haWwiOiJrb3NhbWFkbWluQGdtYWlsLmNvbSIsIm5hbWUiOiJrb3NhbWFkbWluIiwiaWF0IjoxNjE4MjE2MjkzLCJleHAiOjE2MTgyMTk4OTN9.DYt9PWwCWSwd-xcNWNobOsY_J_M3iy5hX0N38nsSw-A
+
+
+###
+GET http://localhost:5000/api/v1/orgadmin/organization
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6Im9yZ2FkbWluIiwiZW1haWwiOiJ0aW5hYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InRpbmEgYWRtaW4iLCJpYXQiOjE2MTgyMTYwNzksImV4cCI6MTYxODIxOTY3OX0.dlOF98Pmf0xEENEGdRbk3i9ym0zpaOxLdjg7MfAxHNQ
+
+###
+PUT  http://localhost:5000/api/v1/orgadmin/update/info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6Im9yZ2FkbWluIiwiZW1haWwiOiJ0aW5hYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InRpbmEgYWRtaW4iLCJpYXQiOjE2MTgyMTE1MzcsImV4cCI6MTYxODIxNTEzN30.d1dCDUgmlQ9ykAeZJ0RDEDD_OuBf-z4jn_xTROfS35U
+
+{
+  "oldPassword": "tinaadmin",
+  "newPassword": "tinaadmin"
+}
+
+
+###
+PUT  http://localhost:5000/api/v1/orgadmin/avatar
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6Im9yZ2FkbWluIiwiZW1haWwiOiJ0aW5hYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InRpbmEgYWRtaW4iLCJpYXQiOjE2MTgyMjA4NjIsImV4cCI6MTYxODIyNDQ2Mn0.luJqK7dpxYO7oUU9n8GLriHFnKSGG_h4EVpgPp_GWLA
+
+{
+  "base64EncodedImage": "data:image/png;base64,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"
+}
+
+
+###
+PUT http://localhost:5000/api/v1/superadmin/resolveissue/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6Im9yZ2FkbWluIiwiZW1haWwiOiJ0aW5hYWRtaW5AZ21haWwuY29tIiwibmFtZSI6InRpbmEgYWRtaW4iLCJpYXQiOjE2MTgyMjI4MTQsImV4cCI6MTYxODIyNjQxNH0.WH826wv2_C1_KQp7oFOSI18SaSWpYEGdBFkNWBNBRSQ
+
+{
+  "message": "check your account after 10 days"
+}
+
+
+###
+POST http://localhost:5000/api/v1/users/supervisor/login
+Content-Type: application/json
+
+{
+  "email": "nancy@gmail.com",
+  "password": "2001@nancy"
+}
+
+###
+PUT http://localhost:5000/api/v1/users/update/info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6InN1cGVydmlzb3IiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjE4MDgyMTI5LCJleHAiOjE2MTgwODU3Mjl9.YZFaMcpy-ImSYslPCRpkZcKPTTwOdK6ftQ4Tzu5Ldf0
+
+{
+  "oldPassword": "johndoe123",
+  "newPassword": "johndoe12345"
+}
+
+###
+POST http://localhost:5000/api/v1/users/create/issue
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6InN1cGVydmlzb3IiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjE4MDgyMTI5LCJleHAiOjE2MTgwODU3Mjl9.YZFaMcpy-ImSYslPCRpkZcKPTTwOdK6ftQ4Tzu5Ldf0
+
+{
+  "message": "Sir Bonus not received",
+  "createdAt": "2021-04-10T19:22:17.151Z",
+  "recipient": 2
+}
+
+###
+GET http://localhost:5000/api/v1/users/myissues
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6IlVzZXIiLCJlbWFpbCI6Im5hbmN5QGdtYWlsLmNvbSIsIm5hbWUiOiJOYW5jeSBBd291ciIsImlhdCI6MTYxODIzNTgwNywiZXhwIjoxNjE4MjM5NDA3fQ.Ll6vTDp4MNRZiCkbXLe7afBYk8JM_lrjH_Ft_fWo80A
+
+###
+GET http://localhost:5000/api/v1/users/issuesraisedtome
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6IlVzZXIiLCJlbWFpbCI6Im5hbmN5QGdtYWlsLmNvbSIsIm5hbWUiOiJOYW5jeSBBd291ciIsImlhdCI6MTYxODIzNTgwNywiZXhwIjoxNjE4MjM5NDA3fQ.Ll6vTDp4MNRZiCkbXLe7afBYk8JM_lrjH_Ft_fWo80A
+
+###
+GET http://localhost:5000/api/v1/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6IlVzZXIiLCJlbWFpbCI6Im5hbmN5QGdtYWlsLmNvbSIsIm5hbWUiOiJOYW5jeSBBd291ciIsImlhdCI6MTYxODIzMjEwOSwiZXhwIjoxNjE4MjM1NzA5fQ.Hq-T4W30JndaDbRc-C95lnspzEefEMt0MlYOLpdhrqY
+
+###
+GET http://localhost:5000/api/v1/users/organization
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6IlVzZXIiLCJlbWFpbCI6Im5hbmN5QGdtYWlsLmNvbSIsIm5hbWUiOiJOYW5jeSBBd291ciIsImlhdCI6MTYxODIzMjEwOSwiZXhwIjoxNjE4MjM1NzA5fQ.Hq-T4W30JndaDbRc-C95lnspzEefEMt0MlYOLpdhrqY
+
+
+###
+GET http://localhost:5000/api/v1/users/reports
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6IlVzZXIiLCJlbWFpbCI6Im5hbmN5QGdtYWlsLmNvbSIsIm5hbWUiOiJOYW5jeSBBd291ciIsImlhdCI6MTYxODM0NDc0NywiZXhwIjoxNjE4MzQ4MzQ3fQ.vXefsItsISp3IgiQ0exgFuQKdx4geCmZsZFxjV_KjJ0

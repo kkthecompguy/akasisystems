@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issues Report </title>
+  <style>
+    main {
+      background: #f1f5f9;
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .reports {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    } 
+    thead td {
+      font-weight: 400;
+    }
+    thead th {
+      padding: .3rem;
+      font-size: .5rem;
+    }
+
+    td {
+      padding: .2rem .3rem;
+      font-size: .4rem;
+      color: #222;
+    }
+  </style>
+  
+</head>
+<body>
+  <main>
+    <div class="reports">Reports</div>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Issue</th>
+            <th>Status</th>
+            <th>Date Created</th>
+            <th>Action</th>
+            <th>Resolve Date</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          {{#each issues}}
+          <tr>
+            <td>{{this.issue_id}}</td>
+            <td>{{this.message}}</td>
+            <td>{{#if this.status}} resolved {{else}} pending {{/if}}</td> 
+            <td>{{this.date_created}}</td>
+            <td>{{this.resolve_message}}</td>
+            <td>{{this.resolve_date}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
